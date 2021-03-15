@@ -34,17 +34,22 @@ Tested working with no issue on `Android 11` and `iOS 14`
 
 ## Screenshots
 ### List of Decks
-![list](https://user-images.githubusercontent.com/4892654/111182409-d7d70800-85e9-11eb-80e9-a2e166c6165f.png)
+<img alt="List of Decks" src="https://user-images.githubusercontent.com/4892654/111182409-d7d70800-85e9-11eb-80e9-a2e166c6165f.png" width="400">
+
 ### Create Deck
-![new_deck](https://user-images.githubusercontent.com/4892654/111182448-e1607000-85e9-11eb-9856-76979244f634.png)
+<img alt="Create Deck" src="https://user-images.githubusercontent.com/4892654/111182448-e1607000-85e9-11eb-9856-76979244f634.png" width="400">
+
 ### Deck Details
-![deck_detail](https://user-images.githubusercontent.com/4892654/111182503-ecb39b80-85e9-11eb-8f32-16304a059c02.png)
+<img alt="Deck Details" src="https://user-images.githubusercontent.com/4892654/111182503-ecb39b80-85e9-11eb-8f32-16304a059c02.png" width="400">
+
 ### Add Question
-![add_question](https://user-images.githubusercontent.com/4892654/111182566-ff2dd500-85e9-11eb-8070-fcd04b974cbf.png)
+<img alt="Add Question" src="https://user-images.githubusercontent.com/4892654/111182566-ff2dd500-85e9-11eb-8070-fcd04b974cbf.png" width="400">
+
 ### Quiz
-![quiz](https://user-images.githubusercontent.com/4892654/111182600-0654e300-85ea-11eb-9804-319640b937ef.png)
+<img alt="Quiz" src="https://user-images.githubusercontent.com/4892654/111182600-0654e300-85ea-11eb-9804-319640b937ef.png" width="400">
+
 ### Quiz Result
-![result](https://user-images.githubusercontent.com/4892654/111182620-0c4ac400-85ea-11eb-8aa9-a232271ef026.png)
+<img alt="Quiz Result" src="https://user-images.githubusercontent.com/4892654/111182620-0c4ac400-85ea-11eb-8aa9-a232271ef026.png" width="400">
 
 
 
