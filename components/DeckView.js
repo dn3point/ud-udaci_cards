@@ -45,12 +45,14 @@ const DeckView = () => {
                     tabBarIcon: ({ color }) => (
                       <MaterialCommunityIcons name='home' color={color} size={23} />
                     ),
+                    unmountOnBlur: true,
                   }}/>
       <Tab.Screen name='New Deck' component={NewDeckStack}
                   options={{
                     tabBarIcon: ({ color }) => (
                       <Ionicons name='create' color={color} size={23} />
                     ),
+                    unmountOnBlur: true,
                   }}/>
     </Tab.Navigator>
   )
