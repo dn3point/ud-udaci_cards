@@ -28,11 +28,3 @@ export const _addCardToDeckDB = ({title, question}) => {
     AsyncStorage.setItem(DECK_KEY, JSON.stringify(data))
   })
 }
-
-export const _removeDeckDB = (title) => {
-  return _getDecksDB().then((result) => {
-    const data = JSON.parse(result)
-    delete data[title]
-    AsyncStorage.setItem(DECK_KEY, JSON.stringify(data))
-  })
-}

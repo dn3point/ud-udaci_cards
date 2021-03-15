@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import {View} from 'react-native'
+import {StyleSheet, View} from 'react-native'
 import {Button, Input, Text} from 'react-native-elements'
 import {handleAddDeck} from '../actions'
-import {connect, useDispatch} from 'react-redux'
+import {useDispatch} from 'react-redux'
 
 const NewDeck = ({navigation}) => {
   const [title, setTitle] = useState('')
@@ -12,12 +12,24 @@ const NewDeck = ({navigation}) => {
   }
 
   return (
-    <View>
-      <Text h1>What it the title of your new deck</Text>
+    <View style={styles.center}>
+      <Text h2 style={{padding: 10}}>What it the title of your new deck?</Text>
       <Input placeholder='Deck Title' value={title} onChangeText={(text) => setTitle(text)}/>
       <Button title='Create Deck' onPress={createDeck}/>
     </View>
   )
 }
 
-export default connect()(NewDeck)
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 10
+  },
+  m_t_15: {
+    marginTop: 15
+  },
+})
+
+export default NewDeck

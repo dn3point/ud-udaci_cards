@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react'
-import {FlatList, SafeAreaView, Text, TouchableOpacity, View} from 'react-native'
-import {Card} from 'react-native-elements'
+import {FlatList, SafeAreaView, StyleSheet, TouchableOpacity, View} from 'react-native'
+import {Card, Text} from 'react-native-elements'
 import {connect, useDispatch} from 'react-redux'
 import {handleGetDecks} from '../actions'
-import {useIsFocused} from '@react-navigation/core'
 
 const DeckList = ({decks, navigation}) => {
   const dispatch = useDispatch()
@@ -14,20 +13,18 @@ const DeckList = ({decks, navigation}) => {
     }
   })
 
-  const isFocused = useIsFocused()
-
-  useEffect(() => {
-    dispatch(handleGetDecks())
-  } , [isFocused])
-
   const renderItem = ({item}) => {
     const {title, questions} = item
     return (
       <TouchableOpacity key={title} onPress={() => navigation.navigate('deck', {title})}>
         <Card key={title}>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title h3>{title}</Card.Title>
           <Card.Divider/>
-          <Text>{questions.length} cards</Text>
+          <View
+            style={styles.center}
+          >
+            <Text h4>{questions.length} cards</Text>
+          </View>
         </Card>
       </TouchableOpacity>
     )
@@ -43,6 +40,13 @@ const DeckList = ({decks, navigation}) => {
     </SafeAreaView>
   )
 }
+
+const styles = StyleSheet.create({
+  center: {
+    flex: 1,
+    alignItems: 'center',
+  },
+})
 
 function mapStateToProps(decks) {
   return {

@@ -1,10 +1,8 @@
-import {_addCardToDeckDB, _getDecksDB, _removeDeckDB, _saveDeckTitleDB} from '../utils/helps'
+import {_addCardToDeckDB, _getDecksDB, _saveDeckTitleDB} from '../utils/helps'
 
 export const ADD_DECK = 'ADD_DECK'
 export const ADD_QUESTION = 'ADD_QUESTION'
-export const REMOVE_QUESTION = 'REMOVE_QUESTION'
 export const GET_DECKS = 'GET_DECKS'
-export const REMOVE_DECK = 'REMOVE_DECK'
 
 function getDecks(Decks) {
   return {
@@ -31,8 +29,8 @@ function addDeck(title) {
 
 export function handleAddDeck(title) {
   return (dispatch) => {
+    dispatch(addDeck(title))
     return _saveDeckTitleDB(title).then(() => {
-      dispatch(addDeck(title))
     })
   }
 }
@@ -50,28 +48,5 @@ export function handleAddQuestion({title, question}) {
     return _addCardToDeckDB({title, question}).then(() => {
       dispatch(addQuestion({title, question}))
     })
-  }
-}
-
-function removeDeck(title) {
-  return {
-    type: REMOVE_DECK,
-    title
-  }
-}
-
-export function handleRemoveDeck(title) {
-  return (dispatch) => {
-    return _removeDeckDB(title).then(() => {
-      dispatch(removeDeck(title))
-    })
-  }
-}
-
-function removeQuestion({title, question}) {
-  return {
-    type: REMOVE_QUESTION,
-    title,
-    question,
   }
 }
